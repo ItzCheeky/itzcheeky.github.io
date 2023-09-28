@@ -25,30 +25,17 @@ topLink.addEventListener("click", function(event) {
         behavior: "smooth"
     });
 });
-// Function to handle the intersection of elements
-function handleIntersection(entries, observer) {
-    console.log("Intersection observed!");
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-            // Stop observing once the animation is triggered to avoid unnecessary checks
-            observer.unobserve(entry.target);
-        }
+
+// Find the "About" link in the navigation
+const aboutLink = document.getElementById("aboutLink");
+
+// Add a click event listener to the "About" link
+aboutLink.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    // Scroll to the About section with smooth behavior
+    document.querySelector("#about").scrollIntoView({
+        behavior: "smooth"
     });
-}
+});
 
-// Function to set up the Intersection Observer
-function setupIntersectionObserver() {
-    // Create an observer instance
-    const observer = new IntersectionObserver(handleIntersection, {
-        root: null, // Use the viewport as the root
-        threshold: 0.8, // Trigger the animation when 80% of the element is in view
-    });
-
-    // Observe the "About" section
-    const aboutSection = document.querySelector('.animate-on-scroll');
-    observer.observe(aboutSection);
-}
-
-// Call the setupIntersectionObserver function after the page is loaded
-window.addEventListener('load', setupIntersectionObserver);
