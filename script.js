@@ -38,4 +38,31 @@ aboutLink.addEventListener("click", function(event) {
         behavior: "smooth"
     });
 });
+// JavaScript for project previews and details
+const projectPreviews = document.querySelectorAll('.project-preview');
+const projectDetails = document.querySelectorAll('.project-details');
+
+projectPreviews.forEach((preview, index) => {
+    preview.addEventListener('click', () => {
+        projectDetails[index].style.display = 'block';
+    });
+});
+
+const closeButtons = document.querySelectorAll('.close-project');
+
+closeButtons.forEach((button, index) => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        projectDetails[index].style.display = 'none';
+    });
+});
+
+// Close project details when clicking outside of them
+document.addEventListener('click', (event) => {
+    if (!event.target.closest('.project')) {
+        projectDetails.forEach((details) => {
+            details.style.display = 'none';
+        });
+    }
+});
 
