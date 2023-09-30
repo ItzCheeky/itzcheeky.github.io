@@ -10,11 +10,11 @@ body {
 
 nav{
     background-color: rgb(0, 0, 0);
-    padding: 15px 30px;
+    padding: 10px 30px;
     color: white;    
+    outline: 2px solid white;
     position: sticky;
     top: 0;
-    bottom: 0;
     z-index: 100;
     transition: box-shadow 0.3s ease-in-out;
 }
@@ -29,9 +29,8 @@ nav:hover{
     justify-content: space-between;
 }
 .navItem:hover {
-    outline: 2px solid white;
-    outline-offset: 10px; 
-    transition: outline 0.3s ease; 
+    
+    
     cursor: pointer;
   }
   
@@ -44,8 +43,6 @@ nav:hover{
     width: 100%;
     height: 100vh; /* Full viewport height */
     position: relative;
-    /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 97%); */
-    /* clip-path: polygon(0 4%, 100% 12%, 100% 100%, 0 97%);Opposite */
     overflow: hidden;
     z-index: 0;
     
@@ -70,21 +67,14 @@ nav:hover{
 .slide:first-child{
     opacity: 1;
 }
-.aboutDescriptionContainer {
-    padding: 20px 20px;
-    background-color: #000000;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
 
-
-}
 #about {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     background-color: #000000;
+    overflow-x: hidden;
 }
 .aboutHeader{
     display: flex;
@@ -95,6 +85,9 @@ nav:hover{
 }
 .aboutTitle{
     color: #fffcfc;
+    outline: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 10px;
     font-family: "raleway-bold";
     font-size: 35pt;
     margin-left: 20px; /* Add margin for spacing between logo and title */
@@ -105,11 +98,11 @@ nav:hover{
     align-items: center; /* Align items horizontally */
     justify-content: space-between;
 }
-.aboutImage {
-    width: 10%; /* Adjust width as needed */
+.aboutIcon {
+    width: 10%; 
     height: auto;
 }
-.aboutImage img {
+.aboutIcon img {
     max-width: 100%;
     height: auto;
 }
@@ -125,9 +118,18 @@ nav:hover{
 
 }
 .aboutPic {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
+}
+.aboutDescriptionContainer {
+    padding: 20px 20px;
+    background-color: #000000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+
 }
 .aboutDesc{
     outline: 2px solid white;
@@ -139,7 +141,7 @@ nav:hover{
     box-sizing: border-box;
     
 }
-.ab1{
+.aboutDescriptionText{
     color: white;
     font-size: 15pt;
     font-weight: normal;
@@ -148,20 +150,48 @@ nav:hover{
     margin: 0;
     padding-bottom: 20px;
 }
-.ab2, .ab3, .ab4{
-    color: white;
-    font-size: 15pt;
-    font-weight: normal;
-    text-align: Left;
-    padding-left: 5%;
-    margin: 0;
-    padding-bottom: 20px;
+
+
+.langDescription{
+    
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 10px 20px;
+    outline: 2px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 0;
 }
+.langIcon-container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    outline: 2px solid white;
+    padding: 0;
+    border-radius: 10px;
+    word-spacing: 0%;
+    margin-top: 2px;
+}
+
+.langIcon{
+    width: 100%;
+    
+}
+
+
+
 #projects {
     /* Styles for the Projects section */
     background-color: #000000;
+    background-image: url('./img/design.png');
     padding: 20px;
     text-align: center;
+}
+.projectSectionTitle{
+    color: #fffcfc;
+    font-family: "raleway-bold";
+    font-size: 35pt;
+    margin-left: 20px;
 }
 
 .projects-container {
@@ -176,11 +206,10 @@ nav:hover{
 .project {
     /* Styles for project container */
     width: 25%; /* Adjust the width as needed */
-    border: 5px solid #0a009d;
+    border: 5px solid #ffffff;
     border-radius: 20px;
     margin: 10px;
     padding: 20px;
-    background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     text-align: center;
@@ -188,11 +217,7 @@ nav:hover{
     cursor: pointer;
 }
 
-.project-preview {
-    /* Styles for project preview image */
-    width: 100%;
-    height: auto;
-}
+
 
 .project img.project-preview {
     /* Styles for project preview image */
@@ -212,13 +237,14 @@ nav:hover{
     display: none;
     padding: 20px;
     margin-top: 10px;
-    background-color: #fff;
+    color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
 
 .project-details h3 {
     /* Styles for project title in details */
+    color: white;
     font-size: 24px;
     margin: 0;
 }
