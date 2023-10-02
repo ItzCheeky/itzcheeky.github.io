@@ -97,6 +97,8 @@ nav:hover{
     display: flex;
     align-items: center; /* Align items horizontally */
     justify-content: space-between;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 .aboutIcon {
     width: 10%; 
