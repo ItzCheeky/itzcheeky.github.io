@@ -180,8 +180,6 @@ nav:hover{
     
 }
 
-
-
 #projects {
     /* Styles for the Projects section */
     background-color: #000000;
@@ -205,23 +203,34 @@ nav:hover{
 
 }
 
-.project {
-    /* Styles for project container */
-    width: 25%; /* Adjust the width as needed */
+.project{
+    width: 30%; /* Set a fixed width for even spacing (adjust as needed) */
     border: 5px solid #ffffff;
     border-radius: 20px;
     margin: 10px;
     padding: 20px;
+    height: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     text-align: center;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
+   
 }
 
 
 
+
 .project img.project-preview {
+    /* Styles for project preview image */
+    cursor: pointer;
+    width:  100%;
+    height: auto;
+    display: block; /* Center the image horizontally */
+    margin: 0 auto; /* Center the image horizontally */
+    transition: transform 0.3s ease-in-out;
+}
+img.project-preview2 {
     /* Styles for project preview image */
     cursor: pointer;
     max-width: 100%;
@@ -229,29 +238,19 @@ nav:hover{
     display: block; /* Center the image horizontally */
     margin: 0 auto; /* Center the image horizontally */
     transition: transform 0.3s ease-in-out;
+    padding-bottom: 140px;
 }
 .project:hover {
     transform: scale(1.05);
 }
 
-.project-details {
+.projectTitle{
     /* Styles for project details */
-    display: none;
-    padding: 20px;
-    margin-top: 10px;
+    display: block;
+    font-size: 24px;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
 
-.project-details h3 {
-    /* Styles for project title in details */
-    color: white;
-    font-size: 24px;
-    margin: 0;
-}
 
-.project-details p {
-    /* Styles for project description in details */
-    margin-top: 10px;
-}
