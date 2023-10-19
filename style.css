@@ -58,10 +58,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: 0.5s ease;
 }
 .navItem:hover {
-    
-    
+    transform: scale(1.2);
     cursor: pointer;
   }
   
