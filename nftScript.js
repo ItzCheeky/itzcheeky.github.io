@@ -34,5 +34,3 @@ prevButton.addEventListener("click", prevSlide);
 
 
 
-//show nav bar when scrolling up
-

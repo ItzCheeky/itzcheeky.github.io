@@ -51,4 +51,14 @@ projectsLink.addEventListener("click", function(event) {
     });
 });
 
+// Scroll to Resume Link
+const resumeLink = document.getElementById("resumeLink");
+
+resumeLink.addEventListener("click", function(event) {
+    event.preventDefault(); 
+    window.scrollTo({
+        top: document.querySelector("#resume").offsetTop - navBarHeight,
+        behavior: "smooth"
+    });
+});
 
