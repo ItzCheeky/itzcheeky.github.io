@@ -231,7 +231,7 @@ nav {
     /* Flex container for projects */
     display: flex;
     justify-content: space-between;
-    margin-top: 400px;
+    margin-top: 200px;
 }
 
 .project{
