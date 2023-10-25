@@ -7,12 +7,17 @@ body {
     margin: 0;
     overflow: scroll;
     background-color: black;
+<<<<<<< HEAD
+=======
+    overflow-x: hidden;
+>>>>>>> f05573c4803f6a4366101a65824b8638fa0d429a
 }
 a {
     text-decoration: none;
     color: white;
 }
   
+<<<<<<< HEAD
   nav{
     background-color: rgb(0, 0, 0);
     padding: 10px 30px;
@@ -33,6 +38,53 @@ nav:hover{
 
 
 }
+=======
+nav {
+  background-color: rgb(0, 0, 0);
+  padding: 10px 30px;
+  color: white;
+  outline: 2px solid white;
+  position: sticky;
+  top: 0;
+  height: 0;
+  z-index: 100;
+  overflow: hidden;
+  animation: colorCycle 30s linear infinite; 
+  transition: height 0.5s;
+}
+
+@keyframes colorCycle {
+  0% {
+      -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+      box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87);
+  }
+  25% {
+      -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+      box-shadow: 2px 9px 17px 0px rgba(245, 245, 245, 0.87);
+  }
+  50% {
+      -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+      box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87);
+  }
+  75% {
+      -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+      box-shadow: 2px 9px 17px 0px rgba(245, 245, 245, 0.87);
+  }
+  100% {
+      -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+      box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87);
+  }
+}
+
+nav:hover {
+  height: 100px;
+  animation: none;
+  transition: height 0.5s, box-shadow 0.5s;
+  -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+  box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87); 
+}
+
+>>>>>>> f05573c4803f6a4366101a65824b8638fa0d429a
 .navItems{
     font-size: 20px;
     display: flex;
@@ -55,6 +107,7 @@ nav:hover{
 .slide-container{
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
     padding-top: 50px;
 }
 .slideshow {
@@ -66,6 +119,23 @@ nav:hover{
     padding: 20px;
     padding-bottom: 100px;
     border-radius: 10px;
+=======
+    padding-top: 5px;
+    
+    
+}
+.slideshow {
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    padding: 5em;
+    padding-bottom: 10em;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 15px 19px rgba(255,255,255,0.82); 
+    box-shadow: 0px 5px 15px 19px rgba(255,255,255,0.82);
+    margin-bottom: 2em;
+>>>>>>> f05573c4803f6a4366101a65824b8638fa0d429a
   }
   
   .slideshow ul {
@@ -89,7 +159,11 @@ nav:hover{
     padding-bottom: 200px;
   }
   button:hover{
+<<<<<<< HEAD
     scale: 2.5;
+=======
+    transform: scale(1.2);
+>>>>>>> f05573c4803f6a4366101a65824b8638fa0d429a
     cursor: pointer;
   }
   .prevButton, .nextButton{
@@ -97,6 +171,10 @@ nav:hover{
     color: rgb(255, 255, 255);
     background-color: black;
     outline: 2px solid white;
+<<<<<<< HEAD
+=======
+    transition: transform 0.3s ease;
+>>>>>>> f05573c4803f6a4366101a65824b8638fa0d429a
   }
   .prevButton{
     margin-right: 30px;

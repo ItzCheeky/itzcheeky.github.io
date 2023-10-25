@@ -6,31 +6,62 @@ body {
     padding: 0;
     margin: 0;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
-nav{
+nav {
     background-color: rgb(0, 0, 0);
     padding: 10px 30px;
-    color: white;    
+    color: white;
     outline: 2px solid white;
     position: sticky;
     top: 0;
+    height: 0;
     z-index: 100;
-    transition: box-shadow 0.3s ease-in-out;
-}
-nav:hover{
-    -webkit-box-shadow: 2px 9px 17px 0px rgba(0,0,0,0.87); 
-    box-shadow: 2px 9px 17px 0px rgba(245, 245, 245, 0.87);
-}
+    overflow: hidden;
+    animation: colorCycle 30s linear infinite; 
+    transition: height 0.5s;
+  }
+  
+  @keyframes colorCycle {
+    0% {
+        -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+        box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87);
+    }
+    25% {
+        -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+        box-shadow: 2px 9px 17px 0px rgba(245, 245, 245, 0.87);
+    }
+    50% {
+        -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+        box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87);
+    }
+    75% {
+        -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+        box-shadow: 2px 9px 17px 0px rgba(245, 245, 245, 0.87);
+    }
+    100% {
+        -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+        box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87);
+    }
+  }
+  
+  nav:hover {
+    height: 100px;
+    animation: none;
+    transition: height 0.5s, box-shadow 0.5s;
+    -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+    box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87); 
+  }
 .navItems{
     font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: 0.5s ease;
 }
 .navItem:hover {
-    
-    
+    transform: scale(1.2);
     cursor: pointer;
   }
   
@@ -184,32 +215,41 @@ nav:hover{
     /* Styles for the Projects section */
     background-color: #000000;
     background-image: url('./img/design.png');
+    background-repeat: no-repeat;
+    padding: 20px;
     padding: 20px;
     text-align: center;
+    padding-bottom: 500px;
 }
 .projectSectionTitle{
     color: #fffcfc;
-    font-family: "raleway-bold";
-    font-size: 35pt;
-    margin-left: 20px;
+   margin-top: 35px;
+    font-size: 48pt;
 }
 
 .projects-container {
     /* Flex container for projects */
     display: flex;
     justify-content: space-between;
-    margin-top: 200px;
-
-
+    margin-top: 100px;
 }
 
 .project{
+<<<<<<< HEAD
     width: 30%; /* Set a fixed width for even spacing (adjust as needed) */
     border: 5px solid #ffffff;
     border-radius: 20px;
     margin: 10px;
     padding: 20px;
     height: 100%;
+=======
+    width: 30em;
+    height: 30em;
+    border: 5px solid #ffffff;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 50px;
+>>>>>>> f05573c4803f6a4366101a65824b8638fa0d429a
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     text-align: center;
@@ -218,9 +258,12 @@ nav:hover{
    
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> f05573c4803f6a4366101a65824b8638fa0d429a
 .project img.project-preview {
     /* Styles for project preview image */
     cursor: pointer;
@@ -252,5 +295,34 @@ img.project-preview2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
+<<<<<<< HEAD
 
 
+=======
+#resume{
+    background-color: #000000;
+    padding-bottom: 20em;
+    padding-top: 5em;
+}
+.resumeTitle{
+    font-size: 36px;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    outline: 5px solid white;
+}
+
+.resume-container {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.resumePic{
+    width: 1400px;
+    height: 1800px;
+    margin-top: 150px;
+    padding-left: 80px;
+    outline: 5px solid white;
+    border-radius: 5px;
+}
+>>>>>>> f05573c4803f6a4366101a65824b8638fa0d429a
