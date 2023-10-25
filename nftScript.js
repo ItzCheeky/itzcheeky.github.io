@@ -31,11 +31,3 @@ const prevButton = document.querySelector("#prevButton");
 
 nextButton.addEventListener("click", nextSlide);
 prevButton.addEventListener("click", prevSlide);
-
-
-
-<<<<<<< HEAD
-//show nav bar when scrolling up
-
-=======
->>>>>>> f05573c4803f6a4366101a65824b8638fa0d429a

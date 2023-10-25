@@ -235,21 +235,12 @@ nav {
 }
 
 .project{
-<<<<<<< HEAD
-    width: 30%; /* Set a fixed width for even spacing (adjust as needed) */
-    border: 5px solid #ffffff;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 20px;
-    height: 100%;
-=======
     width: 30em;
     height: 30em;
     border: 5px solid #ffffff;
     border-radius: 20px;
     margin: 10px;
     padding: 50px;
->>>>>>> f05573c4803f6a4366101a65824b8638fa0d429a
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     text-align: center;
@@ -258,12 +249,6 @@ nav {
    
 }
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> f05573c4803f6a4366101a65824b8638fa0d429a
 .project img.project-preview {
     /* Styles for project preview image */
     cursor: pointer;
@@ -295,10 +280,6 @@ img.project-preview2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
-<<<<<<< HEAD
-
-
-=======
 #resume{
     background-color: #000000;
     padding-bottom: 20em;
@@ -325,4 +306,3 @@ img.project-preview2 {
     outline: 5px solid white;
     border-radius: 5px;
 }
->>>>>>> f05573c4803f6a4366101a65824b8638fa0d429a

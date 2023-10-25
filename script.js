@@ -51,8 +51,6 @@ projectsLink.addEventListener("click", function(event) {
     });
 });
 
-<<<<<<< HEAD
-=======
 // Scroll to Resume Link
 const resumeLink = document.getElementById("resumeLink");
 
@@ -63,5 +61,3 @@ resumeLink.addEventListener("click", function(event) {
         behavior: "smooth"
     });
 });
->>>>>>> f05573c4803f6a4366101a65824b8638fa0d429a
-
