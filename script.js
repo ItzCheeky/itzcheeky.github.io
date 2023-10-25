@@ -61,3 +61,22 @@ resumeLink.addEventListener("click", function(event) {
         behavior: "smooth"
     });
 });
+
+// let prevScrollPos = window.scrollY;
+// const navbar = document.getElementById('navbar');
+
+// window.onscroll = function(){
+    
+//     const currentScrollPos = window.scrollY;
+//     if(prevScrollPos > currentScrollPos) {
+//         //user scrolling up
+//         navbar.classList.add('nav-scroll');
+//     }
+//     else
+//     {
+//         navbar.classList.remove('nav-scroll')
+//     }
+
+//     prevScrollPos = currentScrollPos;
+
+// }

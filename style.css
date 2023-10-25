@@ -20,7 +20,7 @@ nav {
     z-index: 100;
     overflow: hidden;
     animation: colorCycle 30s linear infinite; 
-    transition: height 0.5s;
+    transition: all 0.5s ease;
   }
   
   @keyframes colorCycle {
@@ -48,11 +48,15 @@ nav {
   
   nav:hover {
     height: 100px;
-    animation: none;
     transition: height 0.5s, box-shadow 0.5s;
     -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
     box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87); 
   }
+  /* nav.nav-scroll {
+    height: 100px;
+    -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+    box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87); 
+  } */
 .navItems{
     font-size: 20px;
     display: flex;
@@ -299,8 +303,8 @@ img.project-preview2 {
     height: 100%;
 }
 .resumePic{
-    width: 1400px;
-    height: 1800px;
+    width: 700x;
+    height: 1000px;
     margin-top: 150px;
     padding-left: 80px;
     outline: 5px solid white;
