@@ -31,6 +31,3 @@ const prevButton = document.querySelector("#prevButton");
 
 nextButton.addEventListener("click", nextSlide);
 prevButton.addEventListener("click", prevSlide);
-
-
-
