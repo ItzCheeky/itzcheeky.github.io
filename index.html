@@ -8,6 +8,19 @@
     <title>DJ Wellons</title>
 </head>
 <body>
+    <div id="nav-placeholder"></div>
+    <section id="home">
+        <div class="homeText-container">
+            <video autoplay loop muted>
+                <source src="./img/backgroundDesign.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h1> <span class="auto-type"></span></h1>
+            <button class="getStarted" id="getStartedButton">About</button>
+        </div>
+        
+    </section>
+
     <nav id="navbar">
         <div class="navItems">
             <h3 class="navItem" id="topLink"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"></path></svg></h3>
@@ -19,8 +32,25 @@
             
         </div>
     </nav>
-    <section id="home" class="flex height-fix">
-        <div class="slideBg">
+    <section id="about">
+        <div class="aboutHeader">
+            <div class="aboutTitleContainer">
+                <div class="aboutIcon">
+                    <img src="./img/teams/brownsLogo.png" alt="">
+                </div>
+                <div class="aboutIcon">
+                    <img src="./img/teams/rocketsLogoBW.png" alt="">
+                </div>
+                <h1 class="aboutTitle">About Me</h1>
+                <div class="aboutIcon">
+                    <img src="./img/teams/tigersLogo.png" alt="">
+                </div>
+                <div class="aboutIcon">
+                    <img src="./img/teams/ohiostateLogo.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="center-slideshow">
             <div class="slideshow-container">
                 <div class="slide fade">
                     <img src="./img/slideShow/footballPic2.png" alt="">
@@ -39,26 +69,6 @@
                 </div>
                 <div class="slide fade">
                     <img src="./img/TolCmu.jfif" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="about">
-        <div class="aboutHeader">
-            <div class="aboutTitleContainer">
-                <div class="aboutIcon">
-                    <img src="./img/teams/brownsLogo.png" alt="">
-                </div>
-                <div class="aboutIcon">
-                    <img src="./img/teams/rocketsLogoBW.png" alt="">
-                </div>
-                <h1 class="aboutTitle">About Me</h1>
-                <div class="aboutIcon">
-                    <img src="./img/teams/tigersLogo.png" alt="">
-                </div>
-                <div class="aboutIcon">
-                    <img src="./img/teams/ohiostateLogo.png" alt="">
                 </div>
             </div>
         </div>
@@ -154,5 +164,13 @@
         </div>
     </section>
     <script src="script.js"></script>
+ "<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>"
+ <script>
+    var typed = new Typed(".auto-type", {
+        strings: ["Hi, my name is DJ Wellons and welcome to my website"],
+        typeSpeed: 40,
+        
+    })
+ </script>
 </body>
 </html>

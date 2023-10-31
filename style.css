@@ -8,6 +8,9 @@ body {
     overflow: scroll;
     overflow-x: hidden;
 }
+#nav-placeholder {
+    height: 0;
+}
 
 nav {
     background-color: rgb(0, 0, 0);
@@ -69,38 +72,62 @@ nav {
     cursor: pointer;
   }
   
-.slideBg{
-    background-color: rgb(0, 0, 0);
-    padding-bottom: 3em;
-    
-}
-.slideshow-container {
+  /* Style for the sticky navigation bar */
+.sticky {
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    z-index: 100;
+}
+#home {
     position: relative;
-    overflow: hidden;
-    z-index: 0;
-    
 }
 
-.slide {
-    width: 100%;
-    height: 100%;
+video {
     position: absolute;
-    opacity: 0;
     top: 0;
     left: 0;
-    background-size: cover;
-    background-position: center center;
-    transition: opacity 2s ease;   
-}
-.slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the entire slide */
+    object-fit: cover;
+    z-index: 0;
 }
-.slide:first-child{
-    opacity: 1;
+.homeText-container{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+   
+}
+
+.homeText-container h1{
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 50px;
+    z-index: 1;
+    
+}
+.getStarted {
+    font-size: 18px; /* Style your button as needed */
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: 3px solid white;
+    z-index: 1;
+
+}
+.getStarted:hover{
+    transition: ease-in-out .2s;
+    background-color: rgb(44, 44, 44);
 }
 
 #about {
@@ -117,10 +144,11 @@ nav {
     align-items: center;
     text-align: center;
     background-color: #000000;
+    padding-top: 10px;
 }
 .aboutTitle{
     color: #fffcfc;
-    outline: 2px solid white;
+    outline: 5px solid white;
     padding: 10px 20px;
     border-radius: 10px;
     font-family: "raleway-bold";
@@ -136,12 +164,55 @@ nav {
     margin-left: 20px;
 }
 .aboutIcon {
-    width: 10%; 
+    width: 8%; 
     height: auto;
 }
 .aboutIcon img {
     max-width: 100%;
     height: auto;
+}
+.center-slideshow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh; /* This ensures the container takes the full viewport height */
+    background-color: black;
+    margin-top: 200px;
+    margin-bottom: 250px;
+  }
+
+  .slideshow-container {
+    width: 100%;
+    max-width: 1500px;
+    height: 750px;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    padding-bottom: 3em;
+    z-index: 1;
+    
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Use position: absolute to stack slides */
+    opacity: 0;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center center;
+    transition: opacity 2s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire slide */
+}
+
+.slide:first-child {
+    opacity: 1;
 }
 
 .aboutFrame{
