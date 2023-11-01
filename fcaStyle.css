@@ -65,28 +65,32 @@ nav {
     justify-content: space-evenly;
 }
 .navItem:hover {
-    
-    
     cursor: pointer;
-  }
-.title-container{
+}
+
+
+
+.container {
     display: flex;
-    justify-content: center;
-    padding-top: 10px;
+    flex-direction: column;
 }
-.projectTitle{
-    color: #fffcfc;
-    font-size: 35pt;
-    margin-left: 20px;
-}
-.video-container{
+
+.photos {
     display: flex;
-    justify-content: center;
-    padding-top: 50px;
-  
+    justify-content: space-between;
+    padding: 20px;
 }
-iframe{
+.photo {
+    flex: 1;
+    margin-right: 20px;
+}
+.photos img {
+    max-width: 100%;
+}
+.description {
+    padding: 20px;
+    color: white;
     outline: 5px solid white;
-    padding: 2em;
-    border-radius: 2em;
+    font-size: 24px;
+    font-weight: 20;
 }

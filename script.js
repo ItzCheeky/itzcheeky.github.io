@@ -1,4 +1,4 @@
-
+//Slideshow in about section
 let slideIndex = 0;
 showSlides();
 
@@ -15,7 +15,7 @@ function showSlides() {
     setTimeout(showSlides, 6000); // Change slide every 6 seconds 
 }
 
-// Get references to the navigation bar and the placeholder
+
 const navbar = document.getElementById('navbar');
 const navPlaceholder = document.getElementById('nav-placeholder');
 
@@ -33,11 +33,7 @@ function toggleNavbar() {
         navPlaceholder.style.height = 0;
     }
 }
-
-// Attach the toggleNavbar function to the window's scroll event
 window.onscroll = toggleNavbar;
-
-// Initialize the state based on the initial scroll position
 toggleNavbar();
 
 
@@ -99,21 +95,4 @@ resumeLink.addEventListener("click", function(event) {
     });
 });
 
-// let prevScrollPos = window.scrollY;
-// const navbar = document.getElementById('navbar');
 
-// window.onscroll = function(){
-    
-//     const currentScrollPos = window.scrollY;
-//     if(prevScrollPos > currentScrollPos) {
-//         //user scrolling up
-//         navbar.classList.add('nav-scroll');
-//     }
-//     else
-//     {
-//         navbar.classList.remove('nav-scroll')
-//     }
-
-//     prevScrollPos = currentScrollPos;
-
-// }
