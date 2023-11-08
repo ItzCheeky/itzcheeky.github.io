@@ -342,8 +342,30 @@ img.project-preview2 {
     transition: transform 0.3s ease-in-out;
     padding-bottom: 140px;
 }
-.project:hover {
+.project:hover, .fcaProject:hover {
     transform: scale(1.05);
+}
+.fcaProject{
+    width: 30em;
+    height: 30em;
+    border: 5px solid #ffffff;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.fcaProject img.project-preview {
+    /* Styles for project preview image */
+    cursor: pointer;
+    width:  100%;
+    height: auto;
+    display: block; /* Center the image horizontally */
+    margin: 0 auto; /* Center the image horizontally */
+    transition: transform 0.3s ease-in-out;
 }
 
 
