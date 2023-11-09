@@ -8,6 +8,10 @@ body {
     overflow: scroll;
     overflow-x: hidden;
 }
+a {
+    text-decoration: none;
+  }
+  
 #nav-placeholder {
     height: 0;
 }
@@ -19,11 +23,11 @@ nav {
     outline: 2px solid white;
     position: sticky;
     top: 0;
-    height: 0;
+    height: 30px;
     z-index: 100;
     overflow: hidden;
     animation: colorCycle 30s linear infinite; 
-    transition: all 0.5s ease;
+    transition: height 2s;
   }
   
   @keyframes colorCycle {
@@ -49,25 +53,52 @@ nav {
     }
   }
   
-  nav:hover {
+  nav:hover  {
     height: 100px;
-    transition: height 0.5s, box-shadow 0.5s;
+    animation: none;
+    transition: height 2s, box-shadow 0.5s;
     -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
     box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87); 
   }
+  .navMenuIcon{
+    position: absolute;
+    margin-top: -30px;
+    padding-bottom: 30px;
+    animation: fadeIn 5s ease-in-out forwards;
+    
+}
+  nav:hover .navMenuIcon {
+    animation: fadeAway .5s ease-in-out forwards; 
+}
+@keyframes fadeAway {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
 
+    }
+}
 .navItems{
     font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    transition: 0.5s ease;
+    padding-top: 10px;
 }
+
 .navItem:hover {
-    transform: scale(1.2);
     cursor: pointer;
-  }
-  
+}
   /* Style for the sticky navigation bar */
 .sticky {
     position: fixed;
@@ -403,4 +434,99 @@ img.project-preview2 {
     padding-left: 80px;
     outline: 5px solid white;
     border-radius: 5px;
+    margin-bottom: 0;
+}
+
+#contact{
+    padding-top: 100px;
+    background-color: #000000;
+    color: white;
+    padding-bottom: 50vh;
+}
+.contact-container {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.contact-message{
+    font-size: 50px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    outline: 5px solid white;
+    align-items: center;
+    margin-bottom: 100px;
+}
+#contact-form {
+    text-align: center;
+}
+.form-container{
+    outline: 5px solid white;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    padding-bottom: 50px;
+    border-radius: 50px;
+}
+.contactHeader{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 40px;
+}
+.form-group {
+    margin: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+input[type="text"],input[type="email"],
+textarea{
+    padding: 10px;
+    font-size: 16px;
+    outline: 5px solid white;
+    border-radius: 10px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+input[type="text"]{
+    width: 10%;
+}
+input[type="email"]{
+    width: 20%;
+
+}
+textarea {
+    width: 50%;
+    padding-bottom: 50px;
+}
+
+textarea{
+    margin-bottom: 50px;
+}
+
+
+button {
+    background-color: #080808;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 200px;
+    outline: 5px solid white;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
