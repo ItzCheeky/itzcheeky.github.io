@@ -2,12 +2,13 @@ html{
     scroll-behavior: smooth;
 }
 body {
+    background-color: #000000;
     font-family: 'Lato', sans-serif;
     padding: 0;
     margin: 0;
     overflow: scroll;
     overflow-x: hidden;
-}
+   }
 a {
     text-decoration: none;
   }
@@ -442,6 +443,7 @@ img.project-preview2 {
     background-color: #000000;
     color: white;
     padding-bottom: 50vh;
+    margin: 0;
 }
 .contact-container {
     text-align: center;
@@ -459,6 +461,7 @@ img.project-preview2 {
 }
 #contact-form {
     text-align: center;
+    padding-bottom: 200px;
 }
 .form-container{
     outline: 5px solid white;
@@ -530,4 +533,18 @@ button {
 
 button:hover {
     background-color: #0300b3;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    outline: 5px solid white;
+    background-color: rgb(34, 33, 33);
+    height: 100px;
+    margin: 0;
+    background-color: rgb(34, 33, 33);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
 }
