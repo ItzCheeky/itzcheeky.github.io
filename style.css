@@ -542,9 +542,18 @@ footer{
     height: 100px;
     margin: 0;
     background-color: rgb(34, 33, 33);
-    color: white;
     text-align: center;
     padding: 20px;
     bottom: 0;
     width: 100%;
+}
+.backToTop{
+    text-align: center;
+    color: white;
+    translate: -30px;
+}
+.backToTop:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: .5s ease-out;
 }

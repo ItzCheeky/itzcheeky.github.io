@@ -98,7 +98,15 @@ nav {
     cursor: pointer;
 }
 
+.fcaTitle{
+    font-weight: bold;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 48px;
+    text-align: center;
+    color: white;
 
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -132,6 +140,7 @@ nav {
     margin: 0 auto; /* Center horizontally while keeping even space on both sides */
     padding: 20px; /* Add padding for space around the container */
     padding-top: 5em;
+    padding-bottom: 200px;
 
 }
 .description {

@@ -94,7 +94,27 @@ resumeLink.addEventListener("click", function(event) {
         behavior: "smooth"
     });
 });
+// Scroll to Contacts
+const contactLink = document.getElementById("contactLink");
 
+contactLink.addEventListener("click", function(event) {
+    event.preventDefault(); 
+    window.scrollTo({
+        top: document.querySelector("#contact").offsetTop - navBarHeight,
+        behavior: "smooth"
+    });
+});
+// Scroll back to top
+const bttLink = document.getElementById("bttLink");
+
+bttLink.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
 
 
 //email
