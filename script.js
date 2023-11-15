@@ -118,25 +118,13 @@ bttLink.addEventListener("click", function(event) {
 
 
 //email
-document.getElementById('contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+function sendMail(){
+    event.preventDefault();
+    let parms = {
+        name : document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message : document.getElementById("message").value,
 
-    fetch('/sendEmail', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, message }),
-    })
-    .then((response) => response.text())
-    .then((data) => {
-        if (data === 'Success') {
-            // Handle a successful submission, e.g., show a success message.
-        } else {
-            // Handle an error, e.g., show an error message.
-        }
-    });
-});
+    }
+    emailjs.send("service_tzo4mc6","template_z4ld1qn",parms).then(alert("Email Sent!!"))
+}
