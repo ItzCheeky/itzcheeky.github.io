@@ -128,3 +128,18 @@ function sendMail(){
     }
     emailjs.send("service_tzo4mc6","template_z4ld1qn",parms).then(alert("Email Sent!!"))
 }
+
+//Scroll animation
+const observer = new IntersectionObserver((entries) =>{
+    entries.forEach((entry) => {
+        console.log(entry)
+        if(entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else{
+            entrytarget.classList.remove('show');
+        }
+    })
+
+})
+const hiddenElements =document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));

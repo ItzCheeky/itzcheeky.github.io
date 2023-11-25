@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
     <title>DJ Wellons</title>
 </head>
 <body>
     <div id="nav-placeholder"></div>
-    <section id="home">
+    <section class="hidden" id="home">
         <div class="homeText-container">
             <video autoplay loop muted>
                 <source src="./img/backgroundDesign.mp4" type="video/mp4">
@@ -32,7 +33,7 @@
             <h3 class="navItem" id="contactLink">Contact</h3>
         </div>
     </nav>
-    <section id="about">
+    <section class="hidden" id="about">
         <div class="aboutHeader">
             <div class="aboutTitleContainer">
                 <div class="aboutIcon">
@@ -72,6 +73,8 @@
                 </div>
             </div>
         </div>
+    </section>
+        <section class="hidden" id="aboutDesc">
         <div class="aboutDescriptionContainer">
             <div class="aboutFrame">
                 <img class="aboutPic" src="./img/studentAthlete.png" alt="">
@@ -121,41 +124,41 @@
                 </h1>
             </div>
         </div>
+
         <br>
         <br>
         <br><br><br><br><br><br>
         <h1 class="langDescription">Languages Familiar with from course work and experience:</h1>
-    
-            <div class="langIcon-container">
-                <div class="langIcon">
-                    <img src="./img/languages/html.png" alt="HTML5">
-                </div>
-                <div class="langIcon">
-                    <img src="./img/languages/css.png" alt="CSS">
-                </div>
-                <div class="langIcon">
-                    <img src="./img/languages/js.png" alt="JavaScript">
-                </div>
-                <div class="langIcon">
-                    <img src="./img/languages/Cpp.png" alt="C++">
-                </div>
-                <div class="langIcon">
-                    <img src="./img/languages/C.png" alt="C">
-                </div>
-                <div class="langIcon">
-                    <img src="./img/languages/mysql.png" alt="MySQL">
-                </div>
-                <div class="langIcon">
-                    <img src="./img/languages/Solidity.png" alt="Solidity">
-                </div>
-                <div class="langIcon">
-                    <img src="./img/languages/vhdl.png" alt="VHDL">
-                </div>
+
+        <div class="logos">
+            <div class="langIcon hidden">
+                <img src="./img/languages/html.png" alt="HTML5">
             </div>
-        
+            <div class="langIcon hidden">
+                <img src="./img/languages/css.png" alt="CSS">
+            </div>
+            <div class="langIcon hidden">
+                <img src="./img/languages/js.png" alt="JavaScript">
+            </div>
+            <div class="langIcon hidden">
+                <img src="./img/languages/Cpp.png" alt="C++">
+            </div>
+            <div class="langIcon hidden">
+                <img src="./img/languages/C.png" alt="C">
+            </div>
+            <div class="langIcon hidden">
+                <img src="./img/languages/mysql.png" alt="MySQL">
+            </div>
+            <div class="langIcon hidden">
+                <img src="./img/languages/Solidity.png" alt="Solidity">
+            </div>
+            <div class="langIcon hidden">
+                <img src="./img/languages/vhdl.png" alt="VHDL">
+            </div>
+        </div>
         <br><br><br><br><br><br>
     </section>
-    <section id="projects">
+    <section class="hidden" id="projects">
         <h2 class="projectSectionTitle">Projects</h2>
         <div class="projects-container">
                 <div class="project">
@@ -186,7 +189,7 @@
         
 
     </section>
-    <section id="resume">
+    <section class="hidden" id="resume">
         <div class="resume-container">
             <div class="resumeTitle">
                 <h3>Resume</h3>
@@ -194,7 +197,7 @@
             <img src="./img/resume.PNG" alt="Daniel Wellons Resume" class="resumePic">
         </div>
     </section>
-    <section id="contact">
+    <section class="hidden" id="contact">
         <div class="contact-container">
             <h2 class="contact-message">Get in touch or just say something nice!</h2>
             <div class="form-container">

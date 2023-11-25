@@ -1,6 +1,7 @@
 html{
     scroll-behavior: smooth;
 }
+
 body {
     background-color: #000000;
     font-family: 'Lato', sans-serif;
@@ -293,31 +294,59 @@ video {
     color: rgb(255, 255, 255);
     font-size: 20px;
     padding: 10px 20px;
-    outline: 2px solid white;
+    text-align: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-bottom: 0;
 }
-.langIcon-container{
+.logos{
     width: 90%;
     display: flex;
     justify-content: space-between;
-    outline: 2px solid white;
     padding: 0;
     border-radius: 10px;
     word-spacing: 0%;
     margin-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .langIcon{
-    width: 100%;
-    
+    flex: 1;
+    max-width: 100%;
+    height: auto;
 }
+
+.logo:nth-child(2){
+transition-delay: 200ms;
+}
+.logo:nth-child(3){
+transition-delay: 400ms;
+}
+.logo:nth-child(4){
+transition-delay: 600ms;
+}
+.logo:nth-child(5){
+transition-delay: 800ms;
+}
+.logo:nth-child(6){
+transition-delay: 1000ms;
+}
+.logo:nth-child(7){
+transition-delay: 1200ms;
+}
+.logo:nth-child(8){
+transition-delay: 1400ms;
+}
+.logo:nth-child(9){
+transition-delay: 1600ms;
+}
+
 
 #projects {
     /* Styles for the Projects section */
     background-color: #000000;
-    background-image: url('./img/design.png');
+    
     background-repeat: no-repeat;
     padding: 20px;
     padding: 20px;
@@ -331,11 +360,11 @@ video {
 }
 
 .projects-container {
-    /* Flex container for projects */
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
 }
+
 
 .project{
     width: 30em;
