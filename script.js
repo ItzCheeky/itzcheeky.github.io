@@ -130,16 +130,15 @@ function sendMail(){
 }
 
 //Scroll animation
-const observer = new IntersectionObserver((entries) =>{
+const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
-        console.log(entry)
-        if(entry.isIntersecting) {
+        console.log(entry);
+        if (entry.isIntersecting) {
             entry.target.classList.add('show');
-        } else{
-            entrytarget.classList.remove('show');
+            observer.unobserve(entry.target); // Stop observing this element
         }
-    })
+    });
+});
 
-})
-const hiddenElements =document.querySelectorAll('.hidden');
+const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));

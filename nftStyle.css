@@ -100,23 +100,24 @@ nav:hover .navMenuIcon {
 .title-container{
   display: flex;
   justify-content: center;
-  padding-top: 10px;
 }
 .projectTitle{
+  margin-top: .5em;
   color: #fffcfc;
-  font-size: 35pt;
+  font-size: 26pt;
   margin-left: 20px;
 }
-.slide-container{
-  display: flex;
-  justify-content: center;
-  padding-top: 5px;
-  
-  
+.section-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-.slideshow {
+.slide-container{
   width: 1000px;
   height: 500px;
+  float: left;
+}
+.slideshow {
+
   overflow: hidden;
   position: relative;
   padding: 5em;
@@ -143,20 +144,27 @@ nav:hover .navMenuIcon {
   max-height: 100%;
   transform: scale(1.2);
 }
-.button-container{
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 200px;
+.button-container-left{
+  width: 370px;
+  height: 150px;
+  float: left;
+}
+.button-container-right{
+  width: 370px;
+  height: 150px;
+  float: left;
 }
 button:hover{
   transform: scale(1.2);
   cursor: pointer;
+  background-color: white;
 }
 .prevButton, .nextButton{
   scale: 2;
   color: rgb(255, 255, 255);
   background-color: black;
   outline: 2px solid white;
+  height: 2em;
   transition: transform 0.3s ease;
 }
 .prevButton{
@@ -164,5 +172,5 @@ button:hover{
 }
 
 .nextButton{
-  margin-left: 30px;
+  margin-left: 100em;
 }

@@ -13,7 +13,8 @@ body {
 a {
     text-decoration: none;
   }
-  
+
+
 #nav-placeholder {
     height: 0;
 }
@@ -64,11 +65,9 @@ nav {
   }
   .navMenuIcon{
     position: absolute;
-    margin-top: -30px;
-    padding-bottom: 30px;
+    padding-bottom: 85px;
     animation: fadeIn 5s ease-in-out forwards;
-    translate: -37px;
-    
+    padding-top: 20px;
 }
   nav:hover .navMenuIcon {
     animation: fadeAway .5s ease-in-out forwards; 
@@ -104,10 +103,17 @@ nav {
 }
   /* Style for the sticky navigation bar */
 .sticky {
-    position: fixed;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 30px;
+    color: white;
+    outline: 2px solid white;
+    position: sticky;
     top: 0;
-    width: 100%;
+    height: 30px;
     z-index: 100;
+    overflow: hidden;
+    animation: colorCycle 30s linear infinite; 
+    transition: height 2s;
 }
 #home {
     position: relative;
@@ -133,10 +139,13 @@ video {
     align-items: center;
     position: relative;
     z-index: 1;
-   
+    
+    
 }
 
 .homeText-container h1{
+    padding-left: 50px;
+    padding-right: 50px;
     font-size: 40px;
     font-weight: 600;
     padding-bottom: 50px;
@@ -167,6 +176,7 @@ video {
     text-align: center;
     background-color: #000000;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 .aboutHeader{
     display: flex;
@@ -177,24 +187,25 @@ video {
     padding-top: 10px;
 }
 .aboutTitle{
+    
     color: #fffcfc;
     outline: 5px solid white;
     padding: 10px 20px;
     border-radius: 10px;
     font-family: "raleway-bold";
-    font-size: 35pt;
+    font-size: 20pt;
     margin-left: 20px; /* Add margin for spacing between logo and title */
 }
 
 .aboutTitleContainer {
     display: flex;
+    width: 75%;
     align-items: center; /* Align items horizontally */
     justify-content: space-between;
-    margin-right: 20px;
-    margin-left: 20px;
+    padding-right: 1%;
 }
 .aboutIcon {
-    width: 8%; 
+    width: 5%; 
     height: auto;
 }
 .aboutIcon img {
@@ -208,19 +219,20 @@ video {
     width: 100%;
     height: 50vh; /* This ensures the container takes the full viewport height */
     background-color: black;
-    margin-top: 200px;
-    margin-bottom: 250px;
+    margin-top: 5em;
+    margin-bottom: 2%;
   }
 
   .slideshow-container {
-    width: 100%;
+    width: 50%;
     max-width: 1500px;
-    height: 750px;
+    height: 100%;
     position: relative;
     background-color: rgb(0, 0, 0);
+    padding-top: 3em;
     padding-bottom: 3em;
     z-index: 1;
-    
+
 }
 
 .slide {
@@ -246,28 +258,27 @@ video {
 }
 
 .aboutFrame{
-    width: 20%;
+    width: 15%;
     height: auto;
     background-color: #000000;
     outline: 2px solid white;
     outline-offset: 10px;
     border-radius: 10px;
-    margin-top: 19px;
+    margin-top: 10%;
+    margin-left: 2%;
 
 }
 .aboutPic {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    
 }
 .aboutDescriptionContainer {
     padding: 20px 20px;
     background-color: #000000;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-
-
 }
 .aboutDesc{
     outline: 2px solid white;
@@ -275,8 +286,12 @@ video {
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
-    width: 75%;
+    width: 63%;
+    margin-left: 2%;
     box-sizing: border-box;
+    line-height: 2;
+    position: relative;
+    top: -.5em;
     
 }
 .aboutDescriptionText{
@@ -299,14 +314,12 @@ video {
     border-top-right-radius: 10px;
     margin-bottom: 0;
 }
+
 .logos{
     width: 90%;
     display: flex;
-    justify-content: space-between;
-    padding: 0;
-    border-radius: 10px;
     word-spacing: 0%;
-    margin-top: 2px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -314,6 +327,7 @@ video {
 .langIcon{
     flex: 1;
     max-width: 100%;
+    width: 10%;
     height: auto;
 }
 
@@ -351,12 +365,13 @@ transition-delay: 1600ms;
     padding: 20px;
     padding: 20px;
     text-align: center;
-    padding-bottom: 500px;
+    padding-bottom: 20%;
 }
 .projectSectionTitle{
     color: #fffcfc;
    margin-top: 35px;
     font-size: 48pt;
+    position: relative;
 }
 
 .projects-container {
@@ -442,7 +457,7 @@ img.project-preview2 {
 #resume{
     background-color: #000000;
     padding-bottom: 20em;
-    padding-top: 5em;
+    
 }
 .resumeTitle{
     font-size: 36px;
@@ -480,7 +495,7 @@ img.project-preview2 {
     height: 100%;
 }
 .contact-message{
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -490,13 +505,13 @@ img.project-preview2 {
 }
 #contact-form {
     text-align: center;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
 }
 .form-container{
     outline: 5px solid white;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 50%;
     margin: 0 auto;
     padding: 10px;
     padding-bottom: 50px;
