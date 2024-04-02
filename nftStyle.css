@@ -21,7 +21,7 @@ nav {
   outline: 2px solid white;
   position: sticky;
   top: 0;
-  height: 30px;
+  height: 25px;
   z-index: 100;
   overflow: hidden;
   animation: colorCycle 30s linear infinite; 
@@ -54,7 +54,7 @@ nav {
 nav:hover  {
   height: 100px;
   animation: none;
-  transition: height 2s, box-shadow 0.5s;
+  transition: height 1s, box-shadow 0.5s;
   -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
   box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87); 
 }
@@ -108,32 +108,35 @@ nav:hover .navMenuIcon {
   margin-left: 20px;
 }
 .section-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  align-items:center;
+  margin-top: 1%;
+  justify-content: space-between;
+ 
+  
 }
 .slide-container{
-  width: 1000px;
+  width: 900px;
   height: 500px;
-  float: left;
+  
 }
 .slideshow {
-
   overflow: hidden;
-  position: relative;
-  padding: 5em;
-  padding-bottom: 10em;
+  position:relative;
   border-radius: 10px;
   -webkit-box-shadow: 0px 5px 15px 19px rgba(255,255,255,0.82); 
   box-shadow: 0px 5px 15px 19px rgba(255,255,255,0.82);
   margin-bottom: 2em;
+  padding: 2em;
+  
 }
 
 .slideshow ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   width: 100%;
   display: flex;
+  padding: 0;
+  
 }
 
 .slideshow li {
@@ -142,22 +145,12 @@ nav:hover .navMenuIcon {
 .slideshow li img {
   max-width: 100%;
   max-height: 100%;
-  transform: scale(1.2);
 }
-.button-container-left{
-  width: 370px;
-  height: 150px;
-  float: left;
-}
-.button-container-right{
-  width: 370px;
-  height: 150px;
-  float: left;
-}
+
 button:hover{
   transform: scale(1.2);
   cursor: pointer;
-  background-color: white;
+  
 }
 .prevButton, .nextButton{
   scale: 2;
@@ -166,11 +159,19 @@ button:hover{
   outline: 2px solid white;
   height: 2em;
   transition: transform 0.3s ease;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .prevButton{
-  margin-right: 30px;
+  margin-left: 10%;
+  margin-top: 5em;
+
+  
 }
 
 .nextButton{
-  margin-left: 100em;
+  margin-right: 8%;
+  margin-top: 5em;
+  
 }

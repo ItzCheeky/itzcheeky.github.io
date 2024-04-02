@@ -126,7 +126,7 @@ function sendMail(){
         message : document.getElementById("message").value,
 
     }
-    emailjs.send("service_tzo4mc6","template_z4ld1qn",parms).then(alert("Email Sent!!"))
+    emailjs.send("service_tzo4mc6","template_z4ld1qn",parms).then(alert("Email Sent!"))
 }
 
 //Scroll animation

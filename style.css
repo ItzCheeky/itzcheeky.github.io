@@ -30,7 +30,7 @@ nav {
     z-index: 100;
     overflow: hidden;
     animation: colorCycle 30s linear infinite; 
-    transition: height 2s;
+    transition: height 1s;
   }
   
   @keyframes colorCycle {
@@ -264,7 +264,7 @@ video {
     outline: 2px solid white;
     outline-offset: 10px;
     border-radius: 10px;
-    margin-top: 10%;
+    margin-top: 7em;
     margin-left: 2%;
 
 }
