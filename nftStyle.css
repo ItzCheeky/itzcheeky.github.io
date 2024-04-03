@@ -27,6 +27,17 @@ nav {
   animation: colorCycle 30s linear infinite; 
   transition: height 2s;
 }
+@media only screen and (max-width: 768px) {
+  /* Always show the navigation bar */
+  nav {
+      height: 100px; /* Adjust as needed */
+  }
+  /* Disable hover effect and expand/shrink animations */
+  nav:hover,
+  .navMenuIcon {
+      display: none;
+  }
+}
 
 @keyframes colorCycle {
   0% {
