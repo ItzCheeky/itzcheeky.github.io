@@ -34,24 +34,30 @@ function toggleNavbar() {
     }
 }
 
-// Check if the screen width is greater than 768px (considered as desktop)
-if (window.innerWidth > 768) {
-    if ('ontouchstart' in window) {
-        // Use touchmove event for mobile devices
-        window.addEventListener('touchmove', toggleNavbar);
-    } else {
-        // Use scroll event for desktop devices
-        window.addEventListener('scroll', toggleNavbar);
-    }
-    toggleNavbar(); // Call initially to set initial state
-}
 
 
 
-// Scroll to Projects Link
+// Scroll to About section from Home
 const getStartedButton = document.getElementById("getStartedButton");
 
 getStartedButton.addEventListener("click", function(event) {
+    event.preventDefault(); 
+    window.scrollTo({
+        top: document.querySelector("#about").offsetTop - navBarHeight,
+        behavior: "smooth"
+    });
+});
+
+//Scroll/Redirect to Home
+const homeLink = document.getElementById("topLink");
+
+homeLink.addEventListener("click", function(event) {
+    event.preventDefault(); 
+    window.scrollTo({
+        top: document.querySelector("#about").offsetTop - navBarHeight,
+        behavior: "smooth"
+    });
+});homeLink.addEventListener("touchmove", function(event) {
     event.preventDefault(); 
     window.scrollTo({
         top: document.querySelector("#about").offsetTop - navBarHeight,
