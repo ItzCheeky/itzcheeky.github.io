@@ -57,7 +57,8 @@ homeLink.addEventListener("click", function(event) {
         top: document.querySelector("#home").offsetTop - navBarHeight,
         behavior: "smooth"
     });
-});homeLink.addEventListener("touchend", function(event) {
+});
+homeLink.addEventListener("touchend", function(event) {
     event.preventDefault(); 
     window.scrollTo({
         top: document.querySelector("#home").offsetTop - navBarHeight,
@@ -76,7 +77,14 @@ topLink.addEventListener("click", function(event) {
         behavior: "smooth"
     });
 });
+topLink.addEventListener("touchend", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
 
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
 // Scroll to About Link
 const aboutLink = document.getElementById("aboutLink");
 const navBarHeight = document.querySelector("nav").offsetHeight;
@@ -88,7 +96,13 @@ aboutLink.addEventListener("click", function(event) {
         behavior: "smooth"
     });
 });
-
+aboutLink.addEventListener("touchend", function(event) {
+    event.preventDefault(); 
+    window.scrollTo({
+        top: document.querySelector("#about").offsetTop - navBarHeight,
+        behavior: "smooth"
+    });
+});
 
 // Scroll to Projects Link
 const projectsLink = document.getElementById("projectsLink");
@@ -100,11 +114,24 @@ projectsLink.addEventListener("click", function(event) {
         behavior: "smooth"
     });
 });
-
+projectsLink.addEventListener("touchend", function(event) {
+    event.preventDefault(); 
+    window.scrollTo({
+        top: document.querySelector("#projects").offsetTop - navBarHeight,
+        behavior: "smooth"
+    });
+});
 // Scroll to Resume Link
 const resumeLink = document.getElementById("resumeLink");
 
 resumeLink.addEventListener("click", function(event) {
+    event.preventDefault(); 
+    window.scrollTo({
+        top: document.querySelector("#resume").offsetTop - navBarHeight,
+        behavior: "smooth"
+    });
+});
+resumeLink.addEventListener("touchend", function(event) {
     event.preventDefault(); 
     window.scrollTo({
         top: document.querySelector("#resume").offsetTop - navBarHeight,
@@ -121,10 +148,25 @@ contactLink.addEventListener("click", function(event) {
         behavior: "smooth"
     });
 });
+contactLink.addEventListener("touchend", function(event) {
+    event.preventDefault(); 
+    window.scrollTo({
+        top: document.querySelector("#contact").offsetTop - navBarHeight,
+        behavior: "smooth"
+    });
+});
 // Scroll back to top
 const bttLink = document.getElementById("bttLink");
 
 bttLink.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+bttLink.addEventListener("touchend", function(event) {
     event.preventDefault(); // Prevent the default link behavior
 
     window.scrollTo({
@@ -173,3 +215,6 @@ else{
     hiddenElements.forEach((el) => el.classList.add('show'));
     entry.target.classList.add('show');
 }
+
+
+

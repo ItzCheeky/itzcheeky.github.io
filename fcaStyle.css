@@ -50,23 +50,25 @@ nav {
         box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87);
     }
   }
+  @media(hover: hover){
 
-  nav:hover  {
-    height: 100px;
-    animation: none;
-    transition: height 1s, box-shadow 0.5s;
-    -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
-    box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87); 
+      nav:hover  {
+        height: 100px;
+        animation: none;
+        transition: height 1s, box-shadow 0.5s;
+        -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+        box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87); 
+      }
+      .navMenuIcon{
+        position: absolute;
+        margin-top: -30px;
+        padding-bottom: 30px;
+        animation: fadeIn 5s ease-in-out forwards;
+        
+    }
+      nav:hover .navMenuIcon {
+        animation: fadeAway .5s ease-in-out forwards; 
   }
-  .navMenuIcon{
-    position: absolute;
-    margin-top: -30px;
-    padding-bottom: 30px;
-    animation: fadeIn 5s ease-in-out forwards;
-    
-}
-  nav:hover .navMenuIcon {
-    animation: fadeAway .5s ease-in-out forwards; 
 }
 @keyframes fadeAway {
     0% {

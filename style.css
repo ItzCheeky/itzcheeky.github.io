@@ -29,7 +29,7 @@ nav {
     position: sticky;
     top: 0;
     height: 30px;
-    z-index: 100;
+    z-index: 1;
     overflow: hidden;
     animation: colorCycle 30s linear infinite; 
     transition: height 1s;
@@ -67,22 +67,23 @@ nav {
         box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87);
     }
   }
-  
-  nav:hover  {
-    height: 100px;
-    animation: none;
-    transition: height 1s, box-shadow 0.5s;
-    -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
-    box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87); 
-  }
-  .navMenuIcon{
-    position: absolute;
-    padding-bottom: 85px;
-    animation: fadeIn 5s ease-in-out forwards;
-    padding-top: 20px;
-}
-  nav:hover .navMenuIcon {
-    animation: fadeAway .5s ease-in-out forwards; 
+  @media(hover: hover){
+      nav:hover  {
+        height: 100px;
+        animation: none;
+        transition: height 1s, box-shadow 0.5s;
+        -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
+        box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87); 
+      }
+      .navMenuIcon{
+        position: absolute;
+        padding-bottom: 85px;
+        animation: fadeIn 5s ease-in-out forwards;
+        padding-top: 20px;
+    }
+      nav:hover .navMenuIcon {
+        animation: fadeAway .5s ease-in-out forwards; 
+    }
 }
 @keyframes fadeAway {
     0% {
@@ -129,6 +130,9 @@ nav {
     animation: colorCycle 30s linear infinite; 
     transition: height 2s;
 }
+
+
+/* Home Section*/
 #home {
     position: relative;
 }
@@ -182,6 +186,11 @@ video {
     transition: ease-in-out .2s;
     background-color: rgb(44, 44, 44);
 }
+
+
+
+
+/*About Section*/
 
 #about {
     display: flex;
@@ -370,10 +379,13 @@ transition-delay: 1600ms;
 }
 
 
+
+
+/* Projects Section*/
+
+
 #projects {
-    /* Styles for the Projects section */
     background-color: #000000;
-    
     background-repeat: no-repeat;
     padding: 20px;
     padding: 20px;
@@ -408,12 +420,7 @@ transition-delay: 1600ms;
     text-align: center;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
-
-   
 }
-
-
-
 
 .project img.project-preview {
     /* Styles for project preview image */
@@ -460,8 +467,6 @@ img.project-preview2 {
     transition: transform 0.3s ease-in-out;
 }
 
-
-
 .projectTitle{
     /* Styles for project details */
     display: block;
@@ -470,10 +475,13 @@ img.project-preview2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
+
+/*Resume Section*/
+
+
 #resume{
     background-color: #000000;
     padding-bottom: 20em;
-    
 }
 .resumeTitle{
     font-size: 36px;
@@ -482,7 +490,6 @@ img.project-preview2 {
     padding-bottom: 5px;
     outline: 5px solid white;
 }
-
 .resume-container {
     text-align: center;
     width: 100%;
@@ -523,6 +530,10 @@ img.project-preview2 {
     transform: scale(1.3);
     transition: 1s ease-in-out;
 }
+
+
+
+/*Contact Me Section*/
 
 #contact{
     padding-top: 100px;
@@ -620,6 +631,11 @@ button {
 button:hover {
     background-color: #0300b3;
 }
+
+
+/*Footer*/
+
+
 footer{
     display: flex;
     flex-direction: column;
