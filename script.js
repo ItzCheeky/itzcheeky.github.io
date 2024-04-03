@@ -54,13 +54,13 @@ const homeLink = document.getElementById("topLink");
 homeLink.addEventListener("click", function(event) {
     event.preventDefault(); 
     window.scrollTo({
-        top: document.querySelector("#about").offsetTop - navBarHeight,
+        top: document.querySelector("#home").offsetTop - navBarHeight,
         behavior: "smooth"
     });
-});homeLink.addEventListener("touchmove", function(event) {
+});homeLink.addEventListener("touchend", function(event) {
     event.preventDefault(); 
     window.scrollTo({
-        top: document.querySelector("#about").offsetTop - navBarHeight,
+        top: document.querySelector("#home").offsetTop - navBarHeight,
         behavior: "smooth"
     });
 });

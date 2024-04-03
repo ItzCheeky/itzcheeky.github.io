@@ -177,11 +177,7 @@ nav {
     nav {
         height: 50px; /* Adjust as needed */
     }
-    /* Disable hover effect and expand/shrink animations */
-    nav:hover,
-    .navMenuIcon {
-        display: none;
-    }
+    
     .navItems{
         font-size: 10px;
         justify-content: space-between;
