@@ -139,19 +139,21 @@ function sendMail(){
 const hiddenElements = document.querySelectorAll('.hidden');
 
 // Check if Intersection Observer is supported
-if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-                observer.unobserve(entry.target); // Stop observing this element
-            }
+if (window.innerWidth > 768){
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target); // Stop observing this element
+                }
+            });
         });
-    });
-
-    // Observe hidden elements
-    hiddenElements.forEach((el) => observer.observe(el));
-} else {
-    // Fallback for browsers that don't support Intersection Observer
-    hiddenElements.forEach((el) => el.classList.add('show'));
+    
+        // Observe hidden elements
+        hiddenElements.forEach((el) => observer.observe(el));
+    } else {
+        // Fallback for browsers that don't support Intersection Observer
+        hiddenElements.forEach((el) => el.classList.add('show'));
+    }
 }
