@@ -207,6 +207,7 @@ nav {
         font-size: 12px;
         outline: 2px solid white;
         padding-top: 0;
+        line-height: 2;
     }
     .backToTop{
         outline: 2px solid white;

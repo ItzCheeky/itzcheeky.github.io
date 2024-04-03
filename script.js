@@ -36,7 +36,13 @@ function toggleNavbar() {
 
 // Check if the screen width is greater than 768px (considered as desktop)
 if (window.innerWidth > 768) {
-    window.addEventListener('scroll', toggleNavbar);
+    if ('ontouchstart' in window) {
+        // Use touchmove event for mobile devices
+        window.addEventListener('touchmove', toggleNavbar);
+    } else {
+        // Use scroll event for desktop devices
+        window.addEventListener('scroll', toggleNavbar);
+    }
     toggleNavbar(); // Call initially to set initial state
 }
 
