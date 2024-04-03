@@ -7,46 +7,36 @@ body {
     font-family: 'Lato', sans-serif;
     padding: 0;
     margin: 0;
-    overflow: scroll;
     width: 210vh;
     overflow-x: hidden;
-    
-   }
+}
+@media only screen and (max-width: 768px) {
+    body{
+        width: auto;
+        
+        margin-right: 0;
+    }
+}
+
 a {
     text-decoration: none;
   }
 
-
-#nav-placeholder {
-    height: 0;
-}
-
-nav {
-    background-color: rgb(0, 0, 0);
-    padding: 10px 30px;
-    color: white;
-    outline: 2px solid white;
-    position: sticky;
-    top: 0;
-    height: 30px;
-    z-index: 1;
-    overflow: hidden;
-    animation: colorCycle 30s linear infinite; 
-    transition: height 1s;
-  }
-  @media only screen and (max-width: 768px) {
-    /* Always show the navigation bar */
-    nav {
-        height: 100px; /* Adjust as needed */
+  nav {
+      background-color: rgb(0, 0, 0);
+      padding: 10px 30px;
+      color: white;
+      outline: 2px solid white;
+      position: sticky;
+      top: 0;
+      height: 30px;
+      z-index: 100;
+      overflow: hidden;
+      animation: colorCycle 30s linear infinite; 
+      transition: height 1s;
     }
-    /* Disable hover effect and expand/shrink animations */
-    nav:hover,
-    .navMenuIcon {
-        display: none;
-    }
-}
   @keyframes colorCycle {
-    0% {
+      0% {
         -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
         box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87);
     }
@@ -68,8 +58,11 @@ nav {
     }
   }
   @media(hover: hover){
+      #nav-placeholder {
+          height: 0;
+      }
       nav:hover  {
-        height: 100px;
+          height: 100px;
         animation: none;
         transition: height 1s, box-shadow 0.5s;
         -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
@@ -84,23 +77,28 @@ nav {
       nav:hover .navMenuIcon {
         animation: fadeAway .5s ease-in-out forwards; 
     }
-}
-@keyframes fadeAway {
-    0% {
-        opacity: 1;
+    @keyframes fadeAway {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            display: none;
+        }
     }
-    100% {
-        opacity: 0;
-        display: none;
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+    
+        }
     }
-}
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-
+    .navItem:hover, .navItemHome:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: .2s ease-out;
     }
 }
 .navItems, .navItemHome{
@@ -110,11 +108,24 @@ nav {
     justify-content: space-evenly;
     padding-top: 10px;
 }
-
-.navItem:hover, .navItemHome:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-    transition: .2s ease-out;
+@media only screen and (max-width: 768px) {
+    /* Always show the navigation bar */
+    nav {
+        padding-top: 0;
+        height: 4em; /* Adjust as needed */
+    }
+    
+    .navItems{
+        transform: translateY(-15px);
+        font-size: 10px;
+        justify-content: space-between;
+    }
+    .navItemHome{
+        transform: translateY(-5px);
+    } 
+    .navMenuIcon{
+        display: none;
+    }
 }
   /* Style for the sticky navigation bar */
 .sticky {
@@ -182,12 +193,27 @@ video {
     z-index: 1;
 
 }
-.getStarted:hover{
-    transition: ease-in-out .2s;
-    background-color: rgb(44, 44, 44);
+@media(hover: hover){
+    .getStarted:hover{
+        transition: ease-in-out .2s;
+        background-color: rgb(44, 44, 44);
+    }
 }
 
 
+@media only screen and (max-width: 768px) {
+    .homeText-container h1{
+        padding-right: 10px;
+        font-size: 20px;
+    }
+    .getStarted{
+        
+        width: 1em;
+        height: 1.5em;
+
+    }
+
+   }
 
 
 /*About Section*/
