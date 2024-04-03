@@ -33,8 +33,13 @@ function toggleNavbar() {
         navPlaceholder.style.height = 0;
     }
 }
-window.onscroll = toggleNavbar;
-toggleNavbar();
+
+// Check if the screen width is greater than 768px (considered as desktop)
+if (window.innerWidth > 768) {
+    window.addEventListener('scroll', toggleNavbar);
+    toggleNavbar(); // Call initially to set initial state
+}
+
 
 
 // Scroll to Projects Link
