@@ -157,3 +157,6 @@ if (window.innerWidth > 768){
         hiddenElements.forEach((el) => el.classList.add('show'));
     }
 }
+else{
+    hiddenElements.forEach((el) => el.classList.add('show'));
+}
