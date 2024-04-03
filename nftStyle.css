@@ -76,6 +76,17 @@ nav:hover  {
   animation: fadeIn 5s ease-in-out forwards;
   
 }
+@media only screen and (max-width: 768px) {
+  /* Always show the navigation bar */
+  nav {
+      height: 100px; /* Adjust as needed */
+  }
+  /* Disable hover effect and expand/shrink animations */
+  nav:hover,
+  .navMenuIcon {
+      display: none;
+  }
+}
 nav:hover .navMenuIcon {
   animation: fadeAway .5s ease-in-out forwards; 
 }
