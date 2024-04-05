@@ -113,11 +113,12 @@ a {
         padding-top: 0;
         height: 4em; /* Adjust as needed */
         width: 92%;
+        margin-left: -15px;
     }
     
     .navItems{
         transform: translateY(-15px);
-        font-size: 15px;
+        font-size: 10px;
         justify-content: space-between;
     }
     .navItemHome{
@@ -432,7 +433,7 @@ transition-delay: 1600ms;
         padding: 0;
     }
     .aboutDescriptionText{
-        font-size: 12pt;
+        font-size: 8pt;
     }
     .logos{
         
