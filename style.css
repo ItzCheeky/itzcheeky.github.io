@@ -112,10 +112,11 @@ a {
     nav {
         padding-top: 0;
         height: 4em; /* Adjust as needed */
-        width: 86%;
+        width: 89%;
         margin-right: -10px;
         margin-left: -10px;
         border-radius: 0;
+        overflow-x: hidden;
         
     }
     
@@ -469,7 +470,8 @@ transition-delay: 1600ms;
 }
 
 .projects-container {
-    display: block;
+    display: flex;
+    flex-direction:row;
     justify-content: space-between;
     margin-top: 100px;
 }
@@ -537,8 +539,31 @@ img.project-preview2 {
     .projectSectionTitle{
         font-size: 24pt;
     }
+    .projects-container {
+        display: block;
+        margin-left: 18%;
+        margin-top: 5%;
+    }
+    .nftProject{
+        width: 70%;
+        margin-bottom: 5%;
+    }
+    .ademeteProject{
+        width: 70%;
+        margin-bottom: 5%;
+    }
+    .fcaProject{
+        width: 70%;
+        margin-bottom: 5%;
+    }
+    img.project-preview{
+        width: 80%;
+    }
     .projectTitle{
         font-size: 10pt;
+    }
+    img.project-preview3{
+        width: 70%;
     }
 
 
@@ -551,7 +576,7 @@ img.project-preview2 {
 
 #resume{
     background-color: #000000;
-    padding-bottom: 20em;
+    padding-bottom: 5em;
 }
 .resumeTitle{
     font-size: 36px;
@@ -613,12 +638,12 @@ img.project-preview2 {
         outline: 2px solid white;
         border-radius: 10px;
         width: 80%;
-        margin-left: 42px;
+        margin-left: 10%;
     }
     .btn--download{
         outline: 2px solid white;
         font-size: 10pt;
-        margin-left: 33%;
+        margin-left: 40%;
         
     }
 
