@@ -112,8 +112,11 @@ a {
     nav {
         padding-top: 0;
         height: 4em; /* Adjust as needed */
-        width: 92%;
-        margin-left: -15px;
+        width: 86%;
+        margin-right: -10px;
+        margin-left: -10px;
+        border-radius: 0;
+        
     }
     
     .navItems{
@@ -454,8 +457,7 @@ transition-delay: 1600ms;
 #projects {
     background-color: #000000;
     background-repeat: no-repeat;
-    padding: 20px;
-    padding: 20px;
+
     text-align: center;
     padding-bottom: 20%;
 }
@@ -467,13 +469,13 @@ transition-delay: 1600ms;
 }
 
 .projects-container {
-    display: flex;
+    display: block;
     justify-content: space-between;
     margin-top: 100px;
 }
 
 
-.project{
+.nftProject, .ademeteProject{
     border: 5px solid #ffffff;
     border-radius: 20px;
     margin: 10px;
@@ -484,13 +486,10 @@ transition-delay: 1600ms;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
-
-.project img.project-preview {
-    /* Styles for project preview image */
-    cursor: pointer;
-    width:  50%;
-    height: auto;
+img.project-preview {
+    width: 30%;
 }
+
 img.project-preview2 {
     /* Styles for project preview image */
     cursor: pointer;
@@ -516,10 +515,10 @@ img.project-preview2 {
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
-.fcaProject img.project-preview {
+ img.project-preview3 {
     /* Styles for project preview image */
     cursor: pointer;
-    width:  100%;
+    width:  10%;
     height: auto;
     display: block; /* Center the image horizontally */
     margin: 0 auto; /* Center the image horizontally */
@@ -539,8 +538,9 @@ img.project-preview2 {
         font-size: 24pt;
     }
     .projectTitle{
-        font-size: 12pt;
+        font-size: 10pt;
     }
+
 
 
 
@@ -612,6 +612,8 @@ img.project-preview2 {
         font-size: 15pt;
         outline: 2px solid white;
         border-radius: 10px;
+        width: 80%;
+        margin-left: 42px;
     }
     .btn--download{
         outline: 2px solid white;
@@ -723,19 +725,22 @@ button:hover {
     background-color: #0300b3;
 }
 @media only screen and (max-width: 768px){
+
     .form-container{
         width: 80%;
         height: 80%;
         outline: 2px solid white;
+        border-radius: 10pt;
     }
     .contact-message{
+        display: inline-block;
         font-size: 20px;
         border-radius: 10px;
         padding: 15px;
         outline: 2px solid white;
-        width: 100%;
-        margin-left: -15px;
+        width: 60%;
         margin-bottom: 50px;
+        margin-right: 0px;
     }
     .contactHeader{
         font-size: 20px;
@@ -762,7 +767,6 @@ button:hover {
 footer{
     display: flex;
     flex-direction: column;
-    outline: 5px solid white;
     background-color: rgb(34, 33, 33);
     height: 100px;
     margin: 0;
@@ -783,9 +787,7 @@ footer{
 }
 @media only screen and (max-width: 768px){
     footer{
-        width: 93%;
-    }
-    
-        
+        width: 96%;
+        margin-left: -20px;
     }
 }
