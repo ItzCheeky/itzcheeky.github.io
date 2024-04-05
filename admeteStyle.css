@@ -27,17 +27,8 @@ nav {
     animation: colorCycle 30s linear infinite; 
     transition: height 2s;
   }
-  @media only screen and (max-width: 768px) {
-    /* Always show the navigation bar */
-    nav {
-        height: 100px; /* Adjust as needed */
-    }
-    /* Disable hover effect and expand/shrink animations */
-    nav:hover,
-    .navMenuIcon {
-        display: none;
-    }
-}
+
+
   @keyframes colorCycle {
     0% {
         -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
@@ -127,4 +118,39 @@ iframe{
     outline: 5px solid white;
     padding: 2em;
     border-radius: 2em;
+}
+@media only screen and (max-width: 768px) {
+    /* Always show the navigation bar */
+    nav {
+        padding-top: 0;
+        height: 4em; /* Adjust as needed */
+        width: 93%;
+        margin-right: -10px;
+        margin-left: -10px;
+        border-radius: 0;
+        overflow-x: hidden;
+        
+    }
+    
+    .navItems{
+        padding-top: 8%;
+        transform: translateY(-15px);
+        font-size: 10px;
+        justify-content: space-between;
+    }
+    .navItemHome{
+        transform: translateY(-5px);
+        width: 5%;
+    } 
+    .navMenuIcon{
+        display: none;
+    }
+    .projectTitle{
+        font-size: 15pt;
+    }
+    iframe{
+        width: 80%;
+        height: 15em;
+        outline: 2px solid white;
+    }
 }
