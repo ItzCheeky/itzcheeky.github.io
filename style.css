@@ -1,14 +1,14 @@
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
+    margin: 0;
+    width: 100%;
+    height: 100%;
 }
 body {
     background-color: #000000;
     font-family: 'Lato', sans-serif;
-    overflow-x: hidden;
-    margin: 0px;
-    width: 100%;
-    height: 100%;
+    margin-right: 0;
     
 }
 
@@ -21,11 +21,12 @@ a {
       padding: 10px 30px;
       color: white;
       outline: 2px solid white;
+      border-radius: 10px;
       position: sticky;
       top: 0;
       height: 30px;
-      z-index: 100;
       overflow: hidden;
+      z-index: 100;
       animation: colorCycle 30s linear infinite; 
       transition: height 1s;
     }
@@ -56,9 +57,9 @@ a {
           height: 0;
       }
       nav:hover  {
-          height: 100px;
+        height: 100px;
         animation: none;
-        transition: height 1s, box-shadow 0.5s;
+        transition: height .5s, box-shadow 0.5s;
         -webkit-box-shadow: 2px 9px 17px 0px rgba(0, 0, 0, 0.87);
         box-shadow: 2px 9px 17px 0px rgba(0, 98, 245, 0.87); 
       }
@@ -104,6 +105,7 @@ a {
     align-items: center;
     justify-content: space-evenly;
     padding-top: 10px;
+    
 }
 @media only screen and (max-width: 768px) {
     /* Always show the navigation bar */
@@ -120,6 +122,7 @@ a {
     }
     .navItemHome{
         transform: translateY(-5px);
+        width: 5%;
     } 
     .navMenuIcon{
         display: none;
@@ -144,6 +147,7 @@ a {
 /* Home Section*/
 #home {
     position: relative;
+    margin: 0;
 }
 
 video {
@@ -425,6 +429,7 @@ transition-delay: 1600ms;
     }
     .aboutDesc{
         margin-left: 50px;
+        padding: 0;
     }
     .aboutDescriptionText{
         font-size: 12pt;
@@ -468,14 +473,10 @@ transition-delay: 1600ms;
 
 
 .project{
-    margin-left: 0;
-    margin-right: 0;
-    width: 30%;
-    height: 50%;
     border: 5px solid #ffffff;
     border-radius: 20px;
     margin: 10px;
-    padding: 50px;
+    padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     text-align: center;
@@ -486,33 +487,29 @@ transition-delay: 1600ms;
 .project img.project-preview {
     /* Styles for project preview image */
     cursor: pointer;
-    width:  100%;
+    width:  50%;
     height: auto;
-    display: block; /* Center the image horizontally */
-    margin: 0 auto; /* Center the image horizontally */
-    transition: transform 0.3s ease-in-out;
 }
 img.project-preview2 {
     /* Styles for project preview image */
     cursor: pointer;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block; /* Center the image horizontally */
     margin: 0 auto; /* Center the image horizontally */
     transition: transform 0.3s ease-in-out;
-    padding-bottom: 140px;
+   
 }
 .project:hover, .fcaProject:hover {
     transform: scale(1.05);
 }
 .fcaProject{
-    width: 30em;
-    height: 30em;
+    width: auto;
+    height: auto;
     border: 5px solid #ffffff;
     border-radius: 20px;
     margin: 10px;
-    padding: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
     position: relative;
     text-align: center;
     transition: transform 0.3s ease-in-out;
@@ -539,8 +536,13 @@ img.project-preview2 {
 @media only screen and (max-width: 768px) {
     .projectSectionTitle{
         font-size: 24pt;
-        under
     }
+    .projectTitle{
+        font-size: 12pt;
+    }
+
+
+
 }
 
 /*Resume Section*/
@@ -597,7 +599,18 @@ img.project-preview2 {
     transform: scale(1.3);
     transition: 1s ease-in-out;
 }
+@media only screen and (max-width: 768px){
+    .resumePic{
+        width: 85%;
+        height: auto;
+    }
+    .resumeTitle{
+        font-size: 15pt;
+        outline: 2px solid white;
+        border-radius: 10px;
+    }
 
+}
 
 
 /*Contact Me Section*/
@@ -631,7 +644,8 @@ img.project-preview2 {
     outline: 5px solid white;
     justify-content: center;
     align-items: center;
-    width: 50em;
+    width: 90%;
+
     margin: 0 auto;
     padding: 10px;
     padding-bottom: 50px;
@@ -698,6 +712,12 @@ button {
 button:hover {
     background-color: #0300b3;
 }
+@media only screen and(max-width: 768px){
+    .form-container{
+        width: 50%;
+        height: 50%;
+    }
+}
 
 
 /*Footer*/
@@ -714,7 +734,7 @@ footer{
     text-align: center;
     padding: 20px;
     bottom: 0;
-    width: 100%;
+    width: 90%;
 }
 .backToTop{
     text-align: center;
@@ -725,4 +745,9 @@ footer{
     cursor: pointer;
     transform: scale(1.2);
     transition: .5s ease-out;
+}
+@media only screen and (max-width: 768px){
+    footer{
+        width: 93%;
+    }
 }
